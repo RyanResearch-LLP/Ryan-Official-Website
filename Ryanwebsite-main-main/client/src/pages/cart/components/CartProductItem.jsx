@@ -73,7 +73,7 @@ const CartProductItem = ({ item }) => {
 CartProductItem.propTypes = {
   item: PropTypes.shape({
     product: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
     name: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
     price: PropTypes.number.isRequired,

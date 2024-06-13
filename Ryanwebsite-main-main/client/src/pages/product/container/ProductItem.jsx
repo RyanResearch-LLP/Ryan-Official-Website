@@ -9,7 +9,7 @@ const ProductItem = (props) => {
   const product = props.product;
 
   const addToCartHandler = () => {
-    navigate(`/cart/${product._id}?qty=1`);
+    navigate(`/cart/${product.slug}?qty=1`);
   };
 
   return (

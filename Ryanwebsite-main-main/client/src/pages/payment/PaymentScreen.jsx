@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaBitcoin } from "react-icons/fa";
 
 // import Cart from "../../components/cart/Cart";
 // import UserProfileButton from "../../components/UserProfileButton";
@@ -13,6 +12,7 @@ import FormContainer from "../../components/FormContainer";
 import { savePaymentMethod } from "../../actions/cartActions";
 import CheckoutSteps from "../../components/cart/CheckoutSteps";
 import MainLayout from "../../components/MainLayout";
+import COD from "../product/container/COD";
 
 const PaymentScreen = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const PaymentScreen = () => {
   const { shippingAddress, paymentMethod: paymentMethodState } = cart;
 
   const [paymentMethod, setPaymentMethod] = useState(
-    paymentMethodState ? paymentMethodState : "Cryptocurrency"
+    paymentMethodState ? paymentMethodState : "Online Payment"
   );
 
   useEffect(() => {
@@ -52,33 +52,33 @@ const PaymentScreen = () => {
             <button
               type="button"
               disabled={true}
-              onClick={() => setPaymentMethod("Fiat")}
+              onClick={() => setPaymentMethod("Cash")}
               className={`border ${
-                paymentMethod === "Fiat"
+                paymentMethod === "Cash"
                   ? "border-blue-500 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]"
                   : "border-gray-800"
               } rounded-sm flex flex-col gap-y-2 justify-center items-center p-5 relative disabled:cursor-not-allowed`}
             >
-              {paymentMethod === "Fiat" && (
+              {paymentMethod === "Cash" && (
                 <AiFillCheckCircle className="absolute right-[10px] top-[8%] text-blue-500" />
               )}
-              <AiFillDollarCircle className="h-10 w-auto" />
-              <span className="text-gray-600">Fiat currency</span>
+              <COD className="h-10 w-auto" />
+              <span className="text-gray-600">Cash on Delivery </span>
             </button>
             <button
               type="button"
-              onClick={() => setPaymentMethod("Cryptocurrency")}
+              onClick={() => setPaymentMethod("Online Payment")}
               className={`border ${
-                paymentMethod === "Cryptocurrency"
+                paymentMethod === "Online Payment"
                   ? "border-blue-500 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]"
                   : "border-gray-800"
               } rounded-sm flex flex-col gap-y-2 justify-center items-center p-5 relative`}
             >
-              {paymentMethod === "Cryptocurrency" && (
+              {paymentMethod === "Online Payment" && (
                 <AiFillCheckCircle className="absolute right-[10px] top-[8%] text-blue-500" />
               )}
-              <FaBitcoin className="h-10 w-auto" />
-              <span className="text-gray-600">Cryptocurrency</span>
+              <AiFillDollarCircle className="h-10 w-auto" />
+              <span className="text-gray-600">Online Payment</span>
             </button>
           </div>
           <button type="submit" className="btn w-full mt-5">

@@ -20,7 +20,7 @@ const CartScreen = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state?.cart);
   const { cartItems } = cart;
-  const { id: productId } = useParams();
+  const { slug: productId } = useParams();
   const [searchParams] = useSearchParams();
 
   const qty = searchParams.get("qty") ? Number(searchParams.get("qty")) : 1;
@@ -32,7 +32,7 @@ const CartScreen = () => {
   }, [productId, qty, dispatch]);
 
   const checkoutHandler = () => {
-    navigate("/login?redirect=shipping");
+    navigate("/shipping");
   };
 
   return (
