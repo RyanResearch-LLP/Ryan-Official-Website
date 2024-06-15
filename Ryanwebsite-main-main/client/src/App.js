@@ -39,18 +39,18 @@ import ManagePodcasts from "./pages/admin/screens/podcasts/ManagePodcast";
 import EditPodcast from "./pages/admin/screens/podcasts/EditPodcast";
 import PodcastDetailPage from "./pages/podcastDetail/PodcastDetailPage";
 import MyOrders from "./pages/myorders/MyOrders";
-
-
-
+import ShopInitial from "./pages/shopinitial/ShopInitial";
+import RyanProducts from "./pages/ryanproducts/RyanProducts";
+import RyanProductDesc from "./pages/ryanproductdesc/RyanProductDesc";
 
 
 function App() {
   return (
     <div className="App font-opensans">
       <Routes>
-        
         <Route index path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage/>}/>
+        <Route path='/ryanproductdesc' element={<RyanProductDesc/>}/>
         <Route path="/podcast" element={<Podcastpage/>}/>
         <Route path="/service/kids" element={<Service/>}/>
         <Route path="/service/fitness" element={<Fitness/>}/>
@@ -59,6 +59,7 @@ function App() {
         <Route path="/service/international" element={<International/>}/>
         <Route path="/eatwell" element={<Eatwell/>}/>
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/Shopepage" element={<ShopInitial/>}/>
         <Route path="/blog/:slug" element={<ArticleDetailPage />} />
         <Route path="/podcast/:slug" element={<PodcastDetailPage />} />
         <Route path="/register" element={<RegisterPage />} />
@@ -66,10 +67,11 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/myorders" element={<MyOrders />} />
         <Route path="/shop/" element={<ProductScreen />} />
+        <Route path='/ryanproduct' element={<RyanProducts/>}/>
         <Route path="/product/:id" element={<SingleProductScreen />} />
         <Route path="/cart">
-          <Route index element={<CartScreen />} />
-          <Route path=":id" element={<CartScreen />} />
+        <Route index element={<CartScreen />} />
+        <Route path=":id" element={<CartScreen />} />
         </Route>
         <Route path="/shipping" element={<ShippingScreen />} />
         <Route path="/payment" element={<PaymentScreen />} />
@@ -80,7 +82,7 @@ function App() {
           <Route path="comments" element={<Comments />} />
           <Route path="posts/manage" element={<ManagePosts />} />
           <Route path="podcasts/manage" element={<ManagePodcasts />} />
-          <Route path="podcasts/manage/edit/:slug" element={<EditPodcast />} />
+          <Route path="podcasts/manage/edit/:id" element={<EditPodcast />} />
           <Route path="products/manage" element={<ManageProducts />} />
           <Route path="orders/manage" element={<ManageOrders />} />
           <Route path="posts/manage/edit/:slug" element={<EditPost />} />
