@@ -42,6 +42,9 @@ import MyOrders from "./pages/myorders/MyOrders";
 import ShopInitial from "./pages/shopinitial/ShopInitial";
 import RyanProducts from "./pages/ryanproducts/RyanProducts";
 import RyanProductDesc from "./pages/ryanproductdesc/RyanProductDesc";
+import RyanProductDescCollagen from "./pages/ryanproductdesc/ryanproductcollagen";
+import RyanChampionoBook from "./pages/ryanproductdesc/championbook/ryanchampionbook";
+import RyanDiary from "./pages/ryanproductdesc/ryandiary/ryandiary";
 
 
 function App() {
@@ -51,6 +54,9 @@ function App() {
         <Route index path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage/>}/>
         <Route path='/ryanproductdesc' element={<RyanProductDesc/>}/>
+        <Route path="/ryanproductdesccollagen" element={<RyanProductDescCollagen/>}/>
+        <Route path="/ryanproductdesc/ryanchampionbook" element={<RyanChampionoBook/>}/>
+        <Route path="ryanproductdesc/ryandiary" element={<RyanDiary/>}/>
         <Route path="/podcast" element={<Podcastpage/>}/>
         <Route path="/service/kids" element={<Service/>}/>
         <Route path="/service/fitness" element={<Fitness/>}/>
@@ -59,7 +65,7 @@ function App() {
         <Route path="/service/international" element={<International/>}/>
         <Route path="/eatwell" element={<Eatwell/>}/>
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/Shopepage" element={<ShopInitial/>}/>
+        <Route path="/shopinitial" element={<ShopInitial/>}/>
         <Route path="/blog/:slug" element={<ArticleDetailPage />} />
         <Route path="/podcast/:slug" element={<PodcastDetailPage />} />
         <Route path="/register" element={<RegisterPage />} />

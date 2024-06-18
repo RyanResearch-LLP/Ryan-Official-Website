@@ -26,19 +26,19 @@ function RyanProducts() {
                         <p>Product 1 Description</p>
                     </div>
                 </div>
-                <div className="ryan-prdct-container" onClick={() => navigateTo('/ryanproductdesc')}>
+                <div className="ryan-prdct-container" onClick={() => navigateTo('/ryanproductdesc/ryanchampionbook')}>
                     <img src={image3} alt="" />
                     <div className="ryan-overlay">
                         <p>Product 2 Description</p>
                     </div>
                 </div>
-                <div className="ryan-prdct-container" onClick={() => navigateTo('/ryanproductdesc')}>
+                <div className="ryan-prdct-container" onClick={() => navigateTo('/ryanproductdesccollagen')}>
                     <img src={image3} alt="" />
                     <div className="ryan-overlay">
                         <p>Product 3 Description</p>
                     </div>
                 </div>
-                <div className="ryan-prdct-container" onClick={() => navigateTo('/ryanproductdesc')}>
+                <div className="ryan-prdct-container" onClick={() => navigateTo('/ryanproductdesc/ryandiary')}>
                     <img src={image1} alt="" />
                     <div className="ryan-overlay">
                         <p>Product 4 Description</p>

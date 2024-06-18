@@ -1,51 +1,54 @@
-.prouduct-top-layout{
+.collagen-prouduct-top-layout{
     width: 100%;
     height: 600px;
     background-image: linear-gradient(to right, rgb(242, 122, 42), rgb(200, 52, 59));
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.product-content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.product-starting-title{
-    font-size: 30px;
-    width: 60%;
-}
-
-.product-image{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.product-title{
+.collagen-product-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-left: 5%;
+    
+}
+
+.collagen-product-starting-title{
+    font-size: 30px;
+    width: 60%;
+}
+
+.collagen-product-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+
+.collagen-product-title{
     font-weight: bold;
     font-size: 60px;
     color: white;
 }
-.product-end-title{
+.collagen-product-end-title{
     font-weight: bold;
     font-size: 20px;
 }
-.product-sold{
+.collagen-product-sold{
     margin-top: 5%;
     font-size: 20px;
 
 }
-.product-buy-link{
-    border: 2px solid red;
+.collagen-product-buy-link{
     width: 50%;
     margin-top: 5%;
 
 }
 
-.buy-btn {
+.collagen-buy-btn {
     position: relative;
     border-bottom-right-radius: 10px;
     background-image: linear-gradient(to right, #ee6954, #e1301c);
@@ -64,7 +67,7 @@
 }
 
 
-.buy-btn::after {
+.collagen-buy-btn::after {
     content: "";
     position: absolute;
     border-bottom-right-radius: 10px;
@@ -79,7 +82,7 @@
 }
 
 
-.buy-btn:hover {
+.collagen-buy-btn:hover {
     cursor: pointer;
     background-image: linear-gradient(to right, rgba(249, 140, 140, 0.5), rgb(255, 170, 170, 0.5));
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
@@ -87,67 +90,75 @@
 }
 
 
-.product-image img{
-    width: 40%;
-    height: 50%;
+.collagen-product-image img{
+    width: 70%;
+    height: 70%;
     }
 
 
-    .product-desc-section{
+    .collagen-product-desc-section{
         display: flex;
         justify-content: space-evenly;
         margin-top: 5%;
         margin-bottom: 5%;
+        align-items: center;
     }
 
-    .product-desc-image{
+    .collagen-product-desc-image{
         width: 300px;
         height: 500px;
         /* background-image: url('../../files/w3.jpg'); */
         background-size: cover;
-    }
-    .product-desc-image img{
+        }
+    .collagen-product-desc-image img{
         width: 100%;
         height: 100%;
 
     }
 
-    .product-description-layout-chapter{
+    .collagen-product-description-layout-chapter{
         display: flex;
         flex-direction: column;
-
+        width: 40%;
     }
 
-    .product-chapter-title{
-        font-size: 50px;
+    .collagen-product-collagen-list li{
+        margin-left: 10px;
+        list-style-type: disc;
     }
 
-    .product-chapter-desc{
+    .collagen-product-chapter-title{
+        font-size: 30px;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .collagen-product-chapter-desc{
         font-size: 25px;
     }
 
-    .product-chapters-padding{
+    .collagen-product-chapters-padding{
         margin-top: 5%;
         padding-left: 8%;
     }
-    .product-chapter-layout{
+    .collagen-product-chapter-layout{
         display: flex;
         margin-bottom: 5%;
 
     }
-    .chapter-blank-circle{
+    .collagen-chapter-blank-circle{
         width: 50px;
         height: 50px;
         border-radius: 25px;
         background-color: aliceblue;
     }
 
-    .chapter-title{
+    .collagen-chapter-title{
         font-weight: bold;
     }
 
 
-    .product-reviews-layout{
+    .collagen-product-reviews-layout{
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -159,7 +170,7 @@
         padding-top: 40px;
     }
 
-    .product-reviews-segment{
+    .collagen-product-reviews-segment{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -167,7 +178,7 @@
     }
       
 
-    .product-customer-review{
+    .collagen-product-customer-review{
         flex: 1 1 30%; 
         box-sizing: border-box;
         display: flex;
@@ -180,7 +191,7 @@
     }
 
 
-    .ryan-note-layout{
+    .collagen-ryan-note-layout{
         display: flex;
         justify-content: center;
         margin-top: 3%;
@@ -188,7 +199,7 @@
 
     }
 
-    .ryan-note-layout1{
+    .collagen-ryan-note-layout1{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -198,27 +209,27 @@
 
     }
 
-    .ryan-note-image{
+    .collagen-ryan-note-image{
         width: 500px;
         height: 500px;
         /* background-image: url('../../files/image1bg.jpg'); */
         background-size: cover;
         border-radius: 250px;
     }
-    .ryan-note-image img{
+    .collagen-ryan-note-image img{
         width: 100%;
         height: 100%;
         border-radius: 50%;
     }
-    .ryan-note-desc{
+    .collagen-ryan-note-desc{
         width: 70%;
     }
-    .ryan-note-title{
+    .collagen-ryan-note-title{
         font-weight: bold;
         font-size: 40px;
         padding-bottom: 3%;
     }
-    .ryan-note-desc{
+    .collagen-ryan-note-desc{
         font-size: 18px;
         font-weight: bold;
     }
@@ -226,35 +237,35 @@
 
 @media (max-width:1065px){
 
-    .prouduct-top-layout{
+    .collagen-prouduct-top-layout{
         height: 500px;
     }
 
-    .product-starting-title{
+    .collagen-product-starting-title{
         font-size: 25px;
     }
 
-    .product-title{
+    .collagen-product-title{
         font-size: 40px;
     }
-    .product-end-title{
+    .collagen-product-end-title{
         font-size: 18px;
     }
 
-    .product-image img{
-        width: 50%;
-        height: 50%;
+    .collagen-product-image img{
+        width: 70%;
+        height: 70%;
         }
 
         
-    .product-content{
+    .collagen-product-content{
         padding-left: 5%;
     }
 }
 
 @media (max-width:670px){
 
-    .prouduct-top-layout{
+    .collagen-prouduct-top-layout{
         width: 100%;
         height: 600px;
         background-image: linear-gradient(to right, rgb(242, 122, 42), rgb(200, 52, 59));
@@ -263,24 +274,29 @@
         align-items: center;
         flex-direction: column;
     }
+    .collagen-product-chapter-title{
+        font-size: 25px;
+        width: 80%;
+    }
 
-    .product-content{
+
+    .collagen-product-content{
         order: 2;
     }
 
-    .product-image{
+    .collagen-product-image{
         height: 250px;
         order: 1;
-        width: 50%;
+        width: 90%;
     }
     
-.product-image img{
+.collagen-product-image img{
     width: 100%;
     height: 100%;
     }
 
 
-    .buy-btn {
+    .collagen-buy-btn {
         margin-top: 10px;
         display: flex;
 
@@ -289,7 +305,7 @@
 }
 
 @media (max-width:850px){
-    .product-desc-section{
+    .collagen-product-desc-section{
         display: flex;
         justify-content: space-evenly;
         margin-top: 5%;
@@ -297,64 +313,88 @@
         margin-bottom: 5%;
         flex-direction: column;
     }
-    .product-desc-image{
-        width: 90%;
+    .collagen-product-desc-image{
+        width: 80%;
         height: 350px;
 
+    
     }
+
+    .collagen-product-description-layout-chapter{
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+
 }
 
 @media (max-width: 950px) {
-    .product-customer-review {
+    .collagen-product-customer-review {
       flex: 1 1 45%; /* Two items per row */
       width: 45%;
     }
   }
   
   @media (max-width: 600px) {
-    .product-customer-review {
+    .collagen-product-customer-review {
       flex: 1 1 100%; /* One item per row */
-      width: 100%;
+      width: 80%;
+      padding: 10px;
     }
   }
 
   @media (max-width:850px){
-    .ryan-note-layout{
+    .collagen-ryan-note-layout{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .ryan-note-desc{
+    .collagen-ryan-note-desc{
         width: 100%;
         font-weight: normal !important;
     }
-    .ryan-note-layout1{
+    .collagen-ryan-note-layout1{
         margin-top: 5%;
         flex-direction: column;
         width: 100%;
     }
-    .ryan-note-title{
+    .collagen-ryan-note-title{
         font-size: 30px;
     }
 
   }
 
+
   @media (max-width:600px) {
-    .ryan-note-image{
+    .collagen-ryan-note-image{
         width: 400px;
         height: 400px;
     }
   }
 
   @media (max-width:400px) {
-    .ryan-note-image{
+    .collagen-ryan-note-image{
         width: 300px;
         height: 300px;
     }
   }
+
+
   @media (max-width:300px) {
-    .ryan-note-image{
+    .collagen-ryan-note-image{
         width: 200px;
         height: 200px;
+    }
+  }
+
+  @media (max-width:1200px){
+    .collagen-product-description-layout-chapter{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
     }
   }
