@@ -14,6 +14,7 @@ import { useSelector } from "react-redux";
 import { createPost } from "../../../../services/index/posts";
 import { createPodcast } from "../../../../services/index/podcasts";
 import { createProduct } from "../../../../services/index/products";
+import { createRecommend } from "../../../../services/index/recommends";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -58,6 +59,23 @@ const Header = () => {
         console.log(error);
       },
     });
+    const { mutate: mutateCreateRecommend, isLoading: isLoadingCreateRecommend } =
+    useMutation({
+      mutationFn: ({ token }) => {
+        return createRecommend({
+          token,
+        });
+      },
+      onSuccess: (data) => {
+        queryClient.invalidateQueries(["recommends"]);
+        toast.success("Recommendation is created, edit that now!");
+        navigate(`/admin/recommends/manage/edit/${data.slug}`);
+      },
+      onError: (error) => {
+        toast.error(error.message);
+        console.log(error);
+      },
+    });
   const { mutate: mutateCreateProduct, isLoading: isLoadingCreateProduct } =
     useMutation({
       mutationFn: ({  token }) => {
@@ -96,6 +114,9 @@ const Header = () => {
   };
   const handleCreateNewProduct = ({ token }) => {
     mutateCreateProduct({ token });
+  };
+  const handleCreateNewRecommend = ({ token }) => {
+    mutateCreateRecommend({ token });
   };
 
   return (
@@ -164,7 +185,7 @@ const Header = () => {
                 >
                   Add New Post
                 </button>
-                <Link to="/admin/categories/manage">Categories</Link>
+                <Link to="/admin/post-categories/manage">Categories</Link>
               </NavItemCollapse>
               <NavItemCollapse
                 title="Podcasts"
@@ -184,6 +205,25 @@ const Header = () => {
                   Add New Podcast
                 </button>
                 {/* <Link to="/admin/categories/manage">Categories</Link> */}
+              </NavItemCollapse>
+              <NavItemCollapse
+                title="Recommends"
+                icon={<MdDashboard className="text-xl" />}
+                name="recommends"
+                activeNavName={activeNavName}
+                setActiveNavName={setActiveNavName}
+              >
+                <Link to="/admin/recommends/manage">Manage all Recommendations</Link>
+                <button
+                  disabled={isLoadingCreateRecommend}
+                  className="text-start disabled:opacity-60 disabled:cursor-not-allowed"
+                  onClick={() =>
+                    handleCreateNewRecommend({ token: userState.userInfo.token })
+                  }
+                >
+                  Add New Recommendation
+                </button>
+                <Link to="/admin/recommend-categories/manage">Categories</Link>
               </NavItemCollapse>
 
               <NavItem

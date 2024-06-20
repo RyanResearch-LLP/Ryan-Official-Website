@@ -12,6 +12,7 @@ const {
 const userRoutes = require("./routes/userRoutes");
 const memberRoutes = require("./routes/memberRoutes");
 const postRoutes = require("./routes/postRoutes");
+const recommendRoutes = require("./routes/recommendRoutes");
 const podcastRoutes = require("./routes/podcastRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
@@ -19,6 +20,7 @@ const paymentRoutes = require("./routes/paymentRoutes");
 const uploadRoutes = require("./routes/uploadRoutes.js");
 const commentRoutes = require("./routes/commentRoutes");
 const postCategoriesRoutes = require("./routes/postCategoriesRoutes");
+const recommendCategoriesRoutes = require("./routes/recommendCategoriesRoutes");
 
 dotenv.config();
 connectDB();
@@ -33,9 +35,11 @@ app.get("/", (req, res) => {
 app.use("/api/users", userRoutes);
 app.use("/api/members", memberRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/recommends", recommendRoutes);
 app.use("/api/podcasts", podcastRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/post-categories", postCategoriesRoutes);
+app.use("/api/recommend-categories", recommendCategoriesRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);

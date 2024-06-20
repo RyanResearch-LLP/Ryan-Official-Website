@@ -12,8 +12,10 @@ import Admin from "./pages/admin/screens/Admin";
 import Comments from "./pages/admin/screens/comments/Comments";
 import ManagePosts from "./pages/admin/screens/posts/ManagePosts";
 import EditPost from "./pages/admin/screens/posts/EditPost";
-import Categories from "./pages/admin/screens/categories/Categories";
-import EditCategories from "./pages/admin/screens/categories/EditCategories";
+import PCategories from "./pages/admin/screens/postCategories/Categories";
+import PEditCategories from "./pages/admin/screens/postCategories/EditCategories";
+import RCategories from "./pages/admin/screens/recommendCategories/Categories";
+import REditCategories from "./pages/admin/screens/recommendCategories/EditCategories";
 import Users from "./pages/admin/screens/users/Users";
 import BlogPage from "./pages/blog/BlogPage";
 import About from "./pages/about/About"
@@ -45,7 +47,10 @@ import RyanProductDesc from "./pages/ryanproductdesc/RyanProductDesc";
 import RyanProductDescCollagen from "./pages/ryanproductdesc/ryanproductcollagen";
 import RyanChampionoBook from "./pages/ryanproductdesc/championbook/ryanchampionbook";
 import RyanDiary from "./pages/ryanproductdesc/ryandiary/ryandiary";
-
+import ManageRecommends from "./pages/admin/screens/recommends/ManageRecommends";
+import EditRecommend from "./pages/admin/screens/recommends/EditRecommend";
+import RecommendsPage from "./pages/recommends/recommendPage";
+import RecommendDetailPage from "./pages/recommendDetial/RecommendDetail";
 
 function App() {
   return (
@@ -53,21 +58,22 @@ function App() {
       <Routes>
         <Route index path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage/>}/>
+        <Route path="/blog/:slug" element={<ArticleDetailPage />} />
+        <Route path="/podcast" element={<Podcastpage/>}/>
+        <Route path="/podcast/:slug" element={<PodcastDetailPage />} />
         <Route path='/ryanproductdesc' element={<RyanProductDesc/>}/>
         <Route path="/ryanproductdesccollagen" element={<RyanProductDescCollagen/>}/>
         <Route path="/ryanproductdesc/ryanchampionbook" element={<RyanChampionoBook/>}/>
         <Route path="ryanproductdesc/ryandiary" element={<RyanDiary/>}/>
-        <Route path="/podcast" element={<Podcastpage/>}/>
+        <Route path="/ryan-recommends" element={<RecommendsPage/>}/>
+        <Route path="/ryan-recommends/:slug" element={<RecommendDetailPage />} />
         <Route path="/service/kids" element={<Service/>}/>
         <Route path="/service/fitness" element={<Fitness/>}/>
         <Route path="/service/medical" element={<Medical/>}/>
         <Route path="/service/sports" element={<Sports/>}/>
         <Route path="/service/international" element={<International/>}/>
         <Route path="/eatwell" element={<Eatwell/>}/>
-        <Route path="/blog" element={<BlogPage />} />
         <Route path="/shopinitial" element={<ShopInitial/>}/>
-        <Route path="/blog/:slug" element={<ArticleDetailPage />} />
-        <Route path="/podcast/:slug" element={<PodcastDetailPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
@@ -89,14 +95,21 @@ function App() {
           <Route path="posts/manage" element={<ManagePosts />} />
           <Route path="podcasts/manage" element={<ManagePodcasts />} />
           <Route path="podcasts/manage/edit/:id" element={<EditPodcast />} />
+          <Route path="recommends/manage" element={<ManageRecommends />} />
+          <Route path="recommends/manage/edit/:slug" element={<EditRecommend />} />
           <Route path="products/manage" element={<ManageProducts />} />
           <Route path="orders/manage" element={<ManageOrders />} />
           <Route path="posts/manage/edit/:slug" element={<EditPost />} />
           <Route path="products/manage/edit/:slug" element={<EditProduct />} />
-          <Route path="categories/manage" element={<Categories />} />
+          <Route path="post-categories/manage" element={<PCategories />} />
+          <Route path="recommend-categories/manage" element={<RCategories />} />
           <Route
-            path="categories/manage/edit/:slug"
-            element={<EditCategories />}
+            path="post-categories/manage/edit/:slug"
+            element={<PEditCategories />}
+          />
+          <Route
+            path="recommend-categories/manage/edit/:slug"
+            element={<REditCategories />}
           />
           <Route path="users/manage" element={<Users />} />
           <Route path="members/manage" element={<Members />} />
