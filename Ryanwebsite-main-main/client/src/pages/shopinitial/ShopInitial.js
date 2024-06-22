@@ -17,7 +17,7 @@ const UniqueComponent = () => {
       <div style={{height:'700px'}}>
       <div className="sp-image-container">
         <div className="sp-info-box1" style={{top:'10%'}}>Ryan Recommends</div>
-        <img src={image1Url} alt="Image 1" className="sp-image1" onClick={() => navigateTo('/shop/')}/>
+        <img src={image1Url} alt="Image 1" className="sp-image1" onClick={() => navigateTo('/ryan-recommends')}/>
         <div className="sp-info-box2" style={{ right:'0',top:'15%' }}>Ryan Products</div>
         <img src={image2Url} alt="Image 2" className="sp-image2" onClick={() => navigateTo('/ryanproduct')}/>
       </div>

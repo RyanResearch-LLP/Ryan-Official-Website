@@ -1,0 +1,73 @@
+.fm-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #f2f2f2; */
+    background-image: url('../../files/formbg.jpg');
+    background-size: cover;
+    /* border: 2px solid red; */
+  }
+  
+  .fm-contact-form {
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fm-contact-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  .fm-form-group {
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  
+  .fm-contact-form label {
+    font-weight: bold;
+  }
+  
+  .fm-input,
+  .fm-textarea,
+  .fm-radio {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .fm-submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #f24e38;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fm-submit-btn:hover {
+    background-color: #eb2b00;
+  }
+
+  .fm-class-option{
+    font-weight: bold;
+    margin-left: 2%;
+  }
+  
+
+  @media (max-width: 600px) {
+    .fm-contact-form {
+      padding: 20px;
+    }
+  }
+  

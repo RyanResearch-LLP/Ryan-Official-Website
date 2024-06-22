@@ -4,7 +4,7 @@ import LogoImage from "../components/images/logo.png"
 function Footer(){
     return(
         <div>
-           <div className="elfsight-app-061a6cd0-b868-4eea-bb5f-88a855dceca8" data-elfsight-app-lazy></div>
+           <div style={{width:'50%'}} className="elfsight-app-061a6cd0-b868-4eea-bb5f-88a855dceca8" data-elfsight-app-lazy></div>
             <div className="pg-footer">
     <footer className="footer">
       {/* <svg className="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">

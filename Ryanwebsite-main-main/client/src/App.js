@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-
 import "./App.css";
 import ArticleDetailPage from "./pages/articleDetail/ArticleDetailPage";
 import HomePage from "./pages/home/HomePage";
@@ -51,6 +50,9 @@ import ManageRecommends from "./pages/admin/screens/recommends/ManageRecommends"
 import EditRecommend from "./pages/admin/screens/recommends/EditRecommend";
 import RecommendsPage from "./pages/recommends/recommendPage";
 import RecommendDetailPage from "./pages/recommendDetial/RecommendDetail";
+import FormPage from "./pages/form/Formpage";
+
+
 
 function App() {
   return (
@@ -63,6 +65,7 @@ function App() {
         <Route path="/podcast/:slug" element={<PodcastDetailPage />} />
         <Route path='/ryanproductdesc' element={<RyanProductDesc/>}/>
         <Route path="/ryanproductdesccollagen" element={<RyanProductDescCollagen/>}/>
+        <Route path="/pages/form" element={<FormPage/>}/>
         <Route path="/ryanproductdesc/ryanchampionbook" element={<RyanChampionoBook/>}/>
         <Route path="ryanproductdesc/ryandiary" element={<RyanDiary/>}/>
         <Route path="/ryan-recommends" element={<RecommendsPage/>}/>
@@ -100,7 +103,7 @@ function App() {
           <Route path="products/manage" element={<ManageProducts />} />
           <Route path="orders/manage" element={<ManageOrders />} />
           <Route path="posts/manage/edit/:slug" element={<EditPost />} />
-          <Route path="products/manage/edit/:slug" element={<EditProduct />} />
+          <Route path="products/manage/edit/:id" element={<EditProduct />} />
           <Route path="post-categories/manage" element={<PCategories />} />
           <Route path="recommend-categories/manage" element={<RCategories />} />
           <Route

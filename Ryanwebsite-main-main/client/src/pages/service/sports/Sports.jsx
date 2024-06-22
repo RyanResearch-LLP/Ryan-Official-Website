@@ -4,8 +4,6 @@ import MainLayout from "../../../components/MainLayout";
 import Slideshow from "../../../components/Imageslider";
 import TypingEffect from "react-typing-effect";
 import Cardcarousel from "../../../components/CardCarousel";
-import Insta from "../../../components/InstagramEmbed";
-
 import sportsimage from '../../../components/images/sports.jpg'
 import clientimage from '../../../components/images/international.jpg'
 import nutriimage from '../../../components/images/nutri.jpg'
@@ -73,15 +71,6 @@ function Sports() {
         <div className="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/tazfJFY1ufQ?si=_2k_-qhKyGoIejyY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe></div>
         <div className="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/0RNLZvIG2cU?si=XbbQ8IQMIuPzPeOZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe></div>
       </div>
-      <h1 className="Listenclass">
-        Latest Instagram&nbsp; <span style={{ color: "#c8343b" }}>post</span>
-      </h1>
-      <hr className="hr-line" />
-      <div className="insta-feed-section">
-        <Insta url='https://www.instagram.com/p/C66AvvUoW4k/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' className='insta-feed-container'></Insta>
-        <Insta url='https://www.instagram.com/p/C63ZPseoU6o/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' className='insta-feed-container'></Insta>
-        <Insta url='https://www.instagram.com/p/C605HOTyfcl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' className='insta-feed-container'></Insta>
-      </div> 
       <div>
         <h1 className="Listenclass">
           Other Ser <span style={{ color: "#c8343b" }}>vices</span>
