@@ -1,0 +1,40 @@
+.rct-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .rct-button {
+    border: 1px solid #ffe2e2;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgb(255, 218, 218,0.2);
+    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease-in-out,background-color 0.3s, color 0.3s;
+  }
+  
+  
+  .rct-button:hover {
+    transform: translateY(-2px);
+    background-color: #ffcfcf;
+
+  }
+  
+  .rct-button-selected {
+    background-color: #d11920;
+    color: black;
+  }
+  
+  @media (max-width:800px) {
+    .rct-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+    
+  }

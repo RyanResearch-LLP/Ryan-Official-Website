@@ -4,7 +4,11 @@ import LogoImage from "../components/images/logo.png"
 function Footer(){
     return(
         <div>
-           <div style={{width:'50%'}} className="elfsight-app-061a6cd0-b868-4eea-bb5f-88a855dceca8" data-elfsight-app-lazy></div>
+          <div className="footer-social-media">
+          <div style={{width:'50%'}} className="elfsight-app-061a6cd0-b868-4eea-bb5f-88a855dceca8" data-elfsight-app-lazy></div>
+          <div style={{width:'50%'}} className="elfsight-app-0c1780bb-229f-4a8a-8d91-e4590ffcaa00 footer-social-youtube" data-elfsight-app-lazy></div>
+
+          </div>
             <div className="pg-footer">
     <footer className="footer">
       {/* <svg className="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">

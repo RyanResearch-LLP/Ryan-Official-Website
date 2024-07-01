@@ -26,6 +26,13 @@ a {
   .footer-wave-path {
       fill: #ffffff;
   }
+
+  .footer-social-media{
+    display: flex;
+  }
+  .footer-social-youtube{
+    border: 1px solid red;
+  }
   
   .footer-content {
       margin-left: auto;

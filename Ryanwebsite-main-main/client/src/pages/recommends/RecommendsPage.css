@@ -1,0 +1,25 @@
+.rcm-page-container {
+    display: flex;
+    /* width: 100%; */
+    padding: 2.5rem 1.25rem;
+    margin: 5rem 0;
+  }
+  
+
+  
+  @media (min-width: 768px) {
+    .rcm-skeleton {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .rcm-skeleton {
+      width: calc(33.33% - 21px);
+    }
+  }
+  
+  .rcm-no-recommends {
+    color: #FF8C00;
+  }
+  

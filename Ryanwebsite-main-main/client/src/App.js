@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+
 import "./App.css";
 import ArticleDetailPage from "./pages/articleDetail/ArticleDetailPage";
 import HomePage from "./pages/home/HomePage";
@@ -52,8 +53,6 @@ import RecommendsPage from "./pages/recommends/recommendPage";
 import RecommendDetailPage from "./pages/recommendDetial/RecommendDetail";
 import FormPage from "./pages/form/Formpage";
 
-
-
 function App() {
   return (
     <div className="App font-opensans">
@@ -62,10 +61,10 @@ function App() {
         <Route path="/blog" element={<BlogPage/>}/>
         <Route path="/blog/:slug" element={<ArticleDetailPage />} />
         <Route path="/podcast" element={<Podcastpage/>}/>
+        <Route path="/formpage" element={<FormPage/>}/>
         <Route path="/podcast/:slug" element={<PodcastDetailPage />} />
         <Route path='/ryanproductdesc' element={<RyanProductDesc/>}/>
         <Route path="/ryanproductdesccollagen" element={<RyanProductDescCollagen/>}/>
-        <Route path="/pages/form" element={<FormPage/>}/>
         <Route path="/ryanproductdesc/ryanchampionbook" element={<RyanChampionoBook/>}/>
         <Route path="ryanproductdesc/ryandiary" element={<RyanDiary/>}/>
         <Route path="/ryan-recommends" element={<RecommendsPage/>}/>
@@ -97,7 +96,7 @@ function App() {
           <Route path="comments" element={<Comments />} />
           <Route path="posts/manage" element={<ManagePosts />} />
           <Route path="podcasts/manage" element={<ManagePodcasts />} />
-          <Route path="podcasts/manage/edit/:id" element={<EditPodcast />} />
+          <Route path="podcasts/manage/edit/:slug" element={<EditPodcast />} />
           <Route path="recommends/manage" element={<ManageRecommends />} />
           <Route path="recommends/manage/edit/:slug" element={<EditRecommend />} />
           <Route path="products/manage" element={<ManageProducts />} />

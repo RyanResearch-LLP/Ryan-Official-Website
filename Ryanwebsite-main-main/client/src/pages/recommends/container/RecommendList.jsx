@@ -1,23 +1,9 @@
-// import RecommendItem from "./RecommendItem";
-
-// const RecommendList = (recommends) => {
-//   return (
-//     <>
-//         <ul className={`${recommends?.className} flex gap-5`}>
-//           {recommends?.recommends?.map((item) => (
-//             <RecommendItem key={item._id} recommend={item} />
-//           ))}
-//         </ul>
-//     </>
-//   );
-// };
-// export default RecommendList;
-
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { getAllCategories } from "../../../services/index/recommendCategories";
 import RecommendItem from "./RecommendItem";
 import CategoriesTable from "./CategoriesTable";
+import "./RecommendList.css"; // Import the new CSS file
 
 const RecommendList = ({ recommends, className }) => {
   const [categories, setCategories] = useState([]);
@@ -40,23 +26,25 @@ const RecommendList = ({ recommends, className }) => {
         recommend.categories.some((category) => category.title === selectedCategory)
       )
     : recommends;
+
   return (
-    <div className="flex container ">
-    <div className=" mx-auto p-4">
-      <CategoriesTable
-        categories={categories?.data}
-        onCategorySelect={handleCategorySelect}
-        selectedCategory={selectedCategory}
-      />
-    </div>
-    <ul className={`${className} flex gap-5`}>
-      {filteredRecommendations?.map((item) => (
-        <RecommendItem key={item._id} recommend={item} />
-      ))}
-    </ul>
+    <div className={`rcml-container ${className}`}>
+      <div>
+        <CategoriesTable
+          categories={categories?.data}
+          onCategorySelect={handleCategorySelect}
+          selectedCategory={selectedCategory}
+        />
+      </div>
+      <ul className="rcml-flex ">
+        {filteredRecommendations?.map((item) => (
+          <RecommendItem key={item._id} recommend={item} />
+        ))}
+      </ul>
     </div>
   );
 };
+
 RecommendList.propTypes = {
   recommends: PropTypes.arrayOf(PropTypes.shape({
     _id: PropTypes.string.isRequired,
@@ -66,4 +54,5 @@ RecommendList.propTypes = {
   })).isRequired,
   className: PropTypes.string,
 };
+
 export default RecommendList;

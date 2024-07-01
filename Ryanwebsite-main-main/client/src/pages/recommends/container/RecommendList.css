@@ -1,0 +1,29 @@
+.rcml-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  
+  .rcml-flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 800px) {
+    .rcml-flex {
+      justify-content: space-around;
+    }
+    .rcml-container {
+        flex-direction: column;
+      }
+      
+  }
+  
+  @media (max-width: 400px) {
+    .rcml-flex {
+      justify-content: center;
+    }
+  }
+  

@@ -2,7 +2,6 @@
 
 import './Imageslider.css';
 import React from 'react';
-// import image1 from './image/diet.jpg';
 import image2 from './images/football.png';
 import image3 from './images/studying.png';
 

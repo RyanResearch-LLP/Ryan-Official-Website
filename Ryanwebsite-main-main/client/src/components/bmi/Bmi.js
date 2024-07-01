@@ -1,5 +1,7 @@
 import { useState } from "react";
-import "./bmi.css"; // Import your CSS file for styling
+import "./bmi.css"; // Import your CSS file for styling4
+import  heart from '../../files/vegheart.png';
+
 
 const BMI = () => {
   const [age, setAge] = useState("");
@@ -228,7 +230,7 @@ const BMI = () => {
       {showPopup && (
         <div className="bmi-popup">
           <div className="bmi-popup-left">
-            <div>SPRING SALE</div>
+            <div>SALE</div>
             <div><hr /></div>
             <div>40% OFF</div>
             <div><hr /></div>
@@ -240,8 +242,9 @@ const BMI = () => {
             </span>
             <div className="bmi-popup-content-layout">
               <div className="bmi-popup-content-up">
-               <div style={{width:'70%'}}> Your BMI seems Lorem ipsum</div>
-               <button>Contact us for consulatation</button>
+               {/* <div style={{width:'70%'}}> Your BMI seems Lorem ipsum</div>
+               <button>Contact us for consulatation</button> */}
+               <img src={heart} alt="" />
                 </div>
 
               <div className="bmi-popup-content-bottom">

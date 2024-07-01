@@ -7,7 +7,8 @@ import {
   FaLinkedin,
   FaAngleDown
 } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
+import { HiMenuAlt2 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import Logoimage from "../components/images/logo.png";
 import { Link } from 'react-router-dom';
@@ -41,7 +42,7 @@ const Navbar = () => {
           <ul className="only-to-hover">
             {/* <li style={{fontSize:"20px"}}><Link to={'/'}>Home</Link></li> */}
             <li style={{fontSize:"20px"}}><Link to={'/shopinitial'}>Shop</Link></li>
-            <li style={{fontSize:"20px"}}><Link to={'/pages/form'}>Contact Me</Link></li>
+            <li style={{fontSize:"20px"}}><Link to={'/formpage'}>Contact Me</Link></li>
             <li style={{fontSize:"20px"}}
               className="dropdown"
               onMouseEnter={handleDropdownMouseEnter}
@@ -121,7 +122,7 @@ const Navbar = () => {
 
           <div className="hamburger-menu">
             <a href="#" onClick={handleMenuClick}>
-              {showMediaIcons ? <AiOutlineClose /> : <GiHamburgerMenu />}
+              {showMediaIcons ? <AiOutlineClose /> : <HiMenuAlt2 />}
             </a>
           </div>
         </div>

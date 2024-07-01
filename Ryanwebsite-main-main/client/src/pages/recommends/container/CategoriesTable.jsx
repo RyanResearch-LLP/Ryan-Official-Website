@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
+import './CategoriesTable.css'; // Assuming this is your new CSS file
 
 const CategoriesTable = ({ categories, onCategorySelect, selectedCategory }) => {
   return (
-    <div className="flex flex-col gap-4 p-4">
+    <div className="rct-container">
       <button
-        className={`border-2 border-gray-700 rounded px-4 py-2 text-gray-700 ${
-          selectedCategory === null ? 'bg-gray-700 text-white' : 'bg-white'
-        }`}
+        className={`rct-button ${selectedCategory === null ? 'rct-button-selected' : 'rct-button-normal'}`}
         onClick={() => onCategorySelect(null)}
       >
         All Recommends
@@ -14,9 +13,7 @@ const CategoriesTable = ({ categories, onCategorySelect, selectedCategory }) => 
       {categories && categories.map((category) => (
         <button
           key={category._id}
-          className={`border-2 border-gray-700 rounded px-4 py-2 text-gray-700 ${
-            selectedCategory === category.title ? 'bg-gray-700 text-white' : 'bg-white'
-          }`}
+          className={`rct-button ${selectedCategory === category.title ? 'rct-button-selected' : 'rct-button-normal'}`}
           onClick={() => onCategorySelect(category.title)}
         >
           {category.title}
@@ -32,7 +29,7 @@ CategoriesTable.propTypes = {
     title: PropTypes.string.isRequired,
   })),
   onCategorySelect: PropTypes.func.isRequired,
-  selectedCategory: PropTypes.string, // Now we expect a single selected category
+  selectedCategory: PropTypes.string,
 };
 
 export default CategoriesTable;
